@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: aircraft
+
+  datasource:
+    url: jdbc:postgresql://localhost:5430/aircraft_db
+    driver-class-name: org.postgresql.Driver
+    username: acc_dev
+    password: acc_dev12
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
